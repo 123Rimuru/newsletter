@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
@@ -7,6 +9,10 @@ const { stringify } = require("querystring");
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
+
+const listId = process.env.MAILCHIMP_LIST_ID;
+const apiKey = process.env.MAILCHIMP_API_KEY;
+const dcRegion = process.env.MAILCHIMP_DC_REGION;
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/i.html");
@@ -27,11 +33,12 @@ app.post("/res", (req, res) => {
 
     var jdata = JSON.stringify(data1);
 
-    var url = 'https://us8.api.mailchimp.com/3.0/lists/809b1e882c';
+    const url = `https://${dcRegion}.api.mailchimp.com/3.0/lists/${listId}`;
 
     var options = {
         method: 'POST',
-        auth: 'rimuru:c43643963fd435709514e7d136c876e6-us8'
+        auth: `anystring:${apiKey}`
+
     }
 
     var req1 = https.request(url, options, (res1) => {
@@ -59,7 +66,4 @@ app.listen(process.env.PORT || 3000, () => {
     console.log("lol");
 });
 
-
-// api  c43643963fd435709514e7d136c876e6-us8
-// audience/list id  809b1e882c
 
