@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Newsletter Signup</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            height: 100vh;
+        }
+        
+        .form-signin {
+            max-width: 500px;
+            padding: 1rem;
+        }
+        
+        .form-signin input[type="email"] {
+            margin-bottom: 1rem;
+        }
+
+        .sign-card {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transform: translateY(20%);
+            animation: slide-up 0.4s ease forwards;
+        }
+
+        @keyframes slide-up {
+            to { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="d-flex justify-content-center bg-body-tertiary">
+    <!-- Sign Up Form -->
+    <main class="form-signin w-100 mt-5">
+        <form method="POST" action="/res" class="sign-card card success-card border-0 rounded-4 p-5 bg-white">
+            <div class="text-center mb-4">
+                <h1 class="h3 mb-3 fw-normal">Newsletter Signup</h1>
+                <p class="text-muted">Join our mailing list for updates</p>
+            </div>
+            
+            <div class="form-floating">
+                <input type="email" class="form-control" id="floatingInput" name="mail" placeholder="name@example.com" required>
+                <label for="floatingInput">Email address</label>
+            </div>
+            
+            <button class="btn btn-primary w-100 py-2" type="submit">
+                Sign Up
+            </button>
+        </form>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

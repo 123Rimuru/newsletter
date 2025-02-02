@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Failed</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .error-icon {
+            width: 100px;
+            height: 100px;
+            background-color: #dc3545;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            /* animation: shake 0.5s ease-in-out; */
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            12% { transform: translateX(-8px); }
+            36% { transform: translateX(8px); }
+            60% { transform: translateX(-8px); }
+            84% { transform: translateX(8px); }
+        }
+
+        .error-symbol {
+            color: white;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .error-card {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transform: translateY(20%);
+            animation: slide-up 0.7s ease forwards;
+        }
+
+        @keyframes slide-up {
+            to { transform: translateY(0); }
+        }
+
+        .troubleshooting-list {
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .troubleshooting-list li {
+            margin-bottom: 8px;
+            color: #666;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card error-card border-0 rounded-4 p-4 bg-white">
+                    <div class="card-body text-center">
+                        <div class="error-icon mb-4">
+                            <span class="error-symbol">!</span>
+                        </div>
+                        <h1 class="display-6 mb-3 text-danger">Sign Up Failed</h1>
+                        <p class="lead text-muted mb-4">
+                            We encountered an error while processing your newsletter subscription.
+                        </p>
+                        <div class="alert alert-danger bg-danger bg-opacity-10 border-0">
+                            <p class="mb-0">Please check the following and try again:</p>
+                        </div>
+                        <ul class="troubleshooting-list mb-4">
+                            <li>Verify your email address is correct</li>
+                            <li>Check your internet connection</li>
+                            <li>Ensure all required fields are filled</li>
+                            <li>Try clearing your browser cache</li>
+                        </ul>
+                        <div class="mt-4">
+                            <a href="/" class="btn btn-danger me-2">Try Again</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

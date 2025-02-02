@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Success</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .success-icon {
+            width: 100px;
+            height: 100px;
+            background-color: #28a745;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            animation: scale 0.5s ease-in-out;
+        }
+
+        @keyframes scale {
+            0% { transform: scale(0); }
+            70% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .checkmark {
+            color: white;
+            font-size: 50px;
+            transform: rotate(5deg);
+        }
+
+        .success-card {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transform: translateY(20%);
+            animation: slide-up 0.7s ease forwards;
+        }
+
+        @keyframes slide-up {
+            to { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card success-card border-0 rounded-4 p-4 bg-white">
+                    <div class="card-body text-center">
+                        <div class="success-icon mb-4">
+                            <span class="checkmark">✓</span>
+                        </div>
+                        <h1 class="display-6 mb-3">Success!</h1>
+                        <p class="lead text-muted mb-4">
+                            Thank you for subscribing to our newsletter! We're excited to keep you updated with our latest news and offers.
+                        </p>
+                        <div class="alert alert-success bg-success bg-opacity-10 border-0">
+                            <p class="mb-0">Your first newsletter will arrive in your inbox shortly.</p>
+                        </div>
+                        <div class="mt-4">
+                            <a href="/" class="btn btn-primary me-2">Return Home</a>
+                            <!-- <a href="#" class="btn btn-outline-secondary">View Profile</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
